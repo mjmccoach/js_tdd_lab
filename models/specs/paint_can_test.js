@@ -15,4 +15,9 @@ describe('PaintCan', function(){
         const actual = paintCan.empty;
         assert.strictEqual(actual, false)
     })
+    it('can we use paint?', function(){
+        paintCan.usePaint(1)
+        const actual = paintCan.litres;
+        assert.strictEqual(actual, 1)
+    })
 })

@@ -12,4 +12,10 @@ describe('Decorator', function(){
         const actual = decorator.stock;
         assert.strictEqual(actual, 0);
     });
+
+    it('decorator can add stock', function(){
+        decorator.addStock(5);
+        const actual = decorator.stock;
+        assert.strictEqual(actual, 5);
+    });
 })
