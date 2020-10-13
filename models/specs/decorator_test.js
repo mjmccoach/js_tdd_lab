@@ -11,7 +11,7 @@ describe('Decorator', function(){
     beforeEach(function(){
         decorator = new Decorator();
         paintCan = new PaintCan(2)
-        room = new Room(5)
+        room = new Room(4)
     });
     
     it('decorator should start with 0 stock', function(){
@@ -37,10 +37,18 @@ describe('Decorator', function(){
         const actual = decorator.enoughPaint(room)
         assert.strictEqual(actual, true)
     });
+    
     it('is there enough stock?', function(){
         decorator.addStock(5);
         const actual = decorator.enoughStock(room)
         assert.strictEqual(actual, true)
-    })
+    });
+
+    it('can reduce stock', function() {
+        decorator.addStock(5);
+        const actual = decorator.reduceStock(room)
+        assert.strictEqual(actual, 3 )
+    }); 
+    
 
 })

@@ -27,4 +27,10 @@ Decorator.prototype.enoughStock = function(room) {
     }
 }
 
+Decorator.prototype.reduceStock = function(room){
+    let newStock = this.stock - (room.area / 2)
+    return newStock
+}
+
+
 module.exports = Decorator;
