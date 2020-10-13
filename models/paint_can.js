@@ -1,6 +1,6 @@
 const PaintCan = function(litres){
     this.litres = litres;
-    this.empty = 0;
+    this.empty = false;
 }
 
 module.exports = PaintCan;
