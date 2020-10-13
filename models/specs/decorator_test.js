@@ -49,6 +49,12 @@ describe('Decorator', function(){
         const actual = decorator.reduceStock(room)
         assert.strictEqual(actual, 3 )
     }); 
-    
+
+    it('can remove empty cans', function(paintCan) {
+        decorator.addStock(5);
+        paintcan.usePaint(2);
+        const actual = decorator.removeEmptyCan(paintCan)
+        assert.strictEqual(actual, `We finished a can, stock is now ${newStock}`)
+    })
 
 })

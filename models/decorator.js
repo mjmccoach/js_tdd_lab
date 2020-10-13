@@ -32,5 +32,11 @@ Decorator.prototype.reduceStock = function(room){
     return newStock
 }
 
+Decorator.prototype.removeEmptyCan = function(can) {
+    if (can.litres = 0) {
+       let newStock = this.stock -1
+       return `We finished a can, stock is now ${newStock}`}
+    
+}
 
 module.exports = Decorator;
