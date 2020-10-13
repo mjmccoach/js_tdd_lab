@@ -10,5 +10,9 @@ describe('PaintCan', function(){
     it('paintCan should have litres', function(){
         const actual = paintCan.litres;
         assert.strictEqual(actual, 2)
+    });
+    it('Is paintCan empty?', function(){
+        const actual = paintCan.empty;
+        assert.strictEqual(actual, false)
     })
 })
